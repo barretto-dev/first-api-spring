@@ -1,4 +1,4 @@
-package DTO;
+package com.example.firstApi.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

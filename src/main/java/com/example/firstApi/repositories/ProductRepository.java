@@ -1,6 +1,6 @@
-package repositories;
+package com.example.firstApi.repositories;
 
-import models.Product;
+import com.example.firstApi.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
