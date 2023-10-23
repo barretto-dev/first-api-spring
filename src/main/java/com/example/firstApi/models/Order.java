@@ -9,17 +9,16 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.List;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "orders")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable {
+public class Order implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -30,26 +29,9 @@ public class User implements Serializable {
 
     @Column(nullable = false)
     @NotBlank
-    private String fisrtName;
+    private LocalDateTime date;
 
-    @Column(nullable = false)
-    @NotBlank
-    private String lastName;
-
-    @Column(nullable = false, unique = true)
-    @NotBlank
-    private String email;
-
-    @Column(nullable = false)
-    @NotBlank
-    private LocalDate birthdate;
-
-    @OneToOne
-    @JoinColumn(name = "address_id", nullable = false)
-    private Address address;
-
-    @OneToMany(mappedBy = "user")
-    private List<Order> orders;
-
-
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 }
