@@ -11,6 +11,7 @@ import lombok.Setter;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -36,6 +37,13 @@ public class Product implements Serializable {
     @Column(nullable = false)
     @NotNull
     private BigDecimal price;
+
+    @OneToMany(
+            mappedBy = "product",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<OrderProduct> orders;
 
     @Override
     public boolean equals(Object o) {
