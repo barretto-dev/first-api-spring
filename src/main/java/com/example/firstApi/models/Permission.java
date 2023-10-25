@@ -1,7 +1,6 @@
 package com.example.firstApi.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,18 +8,17 @@ import lombok.Setter;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "permission")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable {
+public class Permission implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -29,39 +27,18 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false)
-    @NotBlank
-    private String fisrtName;
-
-    @Column(nullable = false)
-    @NotBlank
-    private String lastName;
-
     @Column(nullable = false, unique = true)
-    @NotBlank
-    private String email;
+    private String name;
 
-    @Column(nullable = false)
-    @NotBlank
-    private LocalDate birthdate;
-
-    @OneToOne
-    @JoinColumn(name = "address_id", nullable = false)
-    private Address address;
-
-    @OneToOne
-    @JoinColumn(name = "role_id", nullable = false)
-    private Role role;
-
-    @OneToMany(mappedBy = "user")
-    private List<Order> orders;
+    @ManyToMany(mappedBy = "permissions")
+    private List<Role> roles;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(id, user.id);
+        Permission that = (Permission) o;
+        return Objects.equals(id, that.id);
     }
 
     @Override
