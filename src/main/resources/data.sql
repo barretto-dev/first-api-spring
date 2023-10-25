@@ -2,23 +2,23 @@ INSERT INTO address (id, street_name, house_number, zip_code) VALUES ('783db5a2-
 INSERT INTO address (id, street_name, house_number, zip_code) VALUES ('8ddaf208-24c4-4e86-ad48-f40748ee1685', 'Rua B', '56', '49010585');
 
 -- Permissions USERS
-INSERT INTO permission (id, name) VALUES ('0ff8c494-619e-4bed-9c06-ca9691a49213', 'UPDATE-MY-INFORMATIONS');
-INSERT INTO permission (id, name) VALUES ('bae8bbc4-96e5-4485-8be6-d29d9c618780', 'CREATE-ADMIN');
-INSERT INTO permission (id, name) VALUES ('1f23b414-f4d5-4900-9fd0-dfa58b6d026c', 'INACTIVATE-CUSTOMER');
-INSERT INTO permission (id, name) VALUES ('98e78f2b-1753-447c-a9e0-56965361f39f', 'SELECT-CUSTOMER');
+INSERT INTO permission (id, name) VALUES ('0ff8c494-619e-4bed-9c06-ca9691a49213', 'UPDATE_MY_INFORMATIONS');
+INSERT INTO permission (id, name) VALUES ('bae8bbc4-96e5-4485-8be6-d29d9c618780', 'CREATE_ADMIN');
+INSERT INTO permission (id, name) VALUES ('1f23b414-f4d5-4900-9fd0-dfa58b6d026c', 'INACTIVATE_CUSTOMER');
+INSERT INTO permission (id, name) VALUES ('98e78f2b-1753-447c-a9e0-56965361f39f', 'SELECT_CUSTOMER');
 
 -- Permissions PRODUCT
-INSERT INTO permission (id, name) VALUES ('56b1637d-fbbc-4945-929d-933b541f47d9', 'CREATE-PRODUCT');
-INSERT INTO permission (id, name) VALUES ('c3a57dcf-33f6-46e2-a645-ecd7bc7d4741', 'UPDATE-PRODUCT');
-INSERT INTO permission (id, name) VALUES ('88398ed7-f8b9-4996-9226-f7b5b87c6e89', 'SELECT-PRODUCT');
-INSERT INTO permission (id, name) VALUES ('7bceffc4-5983-4aa8-8ac7-978235fcb077', 'SELECT-PRODUCTS');
+INSERT INTO permission (id, name) VALUES ('56b1637d-fbbc-4945-929d-933b541f47d9', 'CREATE_PRODUCT');
+INSERT INTO permission (id, name) VALUES ('c3a57dcf-33f6-46e2-a645-ecd7bc7d4741', 'UPDATE_PRODUCT');
+INSERT INTO permission (id, name) VALUES ('88398ed7-f8b9-4996-9226-f7b5b87c6e89', 'SELECT_PRODUCT');
+INSERT INTO permission (id, name) VALUES ('7bceffc4-5983-4aa8-8ac7-978235fcb077', 'SELECT_PRODUCTS');
 
 -- Permissions ORDER
-INSERT INTO permission (id, name) VALUES ('f2afca6a-da66-4dc3-8395-83faf136fc34', 'CREATE-ORDER');
-INSERT INTO permission (id, name) VALUES ('5f3356ee-7930-47a3-89c5-28a01e712859', 'SELECT-MY-ORDERS');
-INSERT INTO permission (id, name) VALUES ('25f6c7d2-5d1a-4a81-bdaa-1b331b18c31a', 'SELECT-CUSTOMER-ORDERS');
-INSERT INTO permission (id, name) VALUES ('94400a1d-a19b-4bd4-8889-404b0c15472a', 'SELECT-MY-ORDER');
-INSERT INTO permission (id, name) VALUES ('d0b98093-1b59-4301-87d1-087ed4668791', 'SELECT-CUSTOMER-ORDER');
+INSERT INTO permission (id, name) VALUES ('f2afca6a-da66-4dc3-8395-83faf136fc34', 'CREATE_ORDER');
+INSERT INTO permission (id, name) VALUES ('5f3356ee-7930-47a3-89c5-28a01e712859', 'SELECT_MY_ORDERS');
+INSERT INTO permission (id, name) VALUES ('25f6c7d2-5d1a-4a81-bdaa-1b331b18c31a', 'SELECT_CUSTOMER_ORDERS');
+INSERT INTO permission (id, name) VALUES ('94400a1d-a19b-4bd4-8889-404b0c15472a', 'SELECT_MY_ORDER');
+INSERT INTO permission (id, name) VALUES ('d0b98093-1b59-4301-87d1-087ed4668791', 'SELECT_CUSTOMER_ORDER');
 
 -- Roles
 INSERT INTO role (id, name) VALUES ('d4d1aee0-0c3b-4cb8-8b22-e1ec162bb105', 'ADMIN');

@@ -1,5 +1,6 @@
 package com.example.firstApi.models;
 
+import com.example.firstApi.enums.PermissionEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,7 +29,8 @@ public class Permission implements Serializable {
     private UUID id;
 
     @Column(nullable = false, unique = true)
-    private String name;
+    @Enumerated(EnumType.STRING)
+    private PermissionEnum name;
 
     @ManyToMany(mappedBy = "permissions")
     private List<Role> roles;

@@ -1,5 +1,6 @@
 package com.example.firstApi.models;
 
+import com.example.firstApi.enums.RoleEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,7 +29,8 @@ public class Role implements Serializable {
     private UUID id;
 
     @Column(nullable = false, unique = true)
-    private String name;
+    @Enumerated(EnumType.STRING)
+    private RoleEnum name;
 
     @ManyToMany()
     @JoinTable(
