@@ -1,0 +1,2 @@
+INSERT INTO address (id, street_name, house_number, zip_code) VALUES ('783db5a2-76fd-42eb-aacc-0dcd4bc79ba0', 'Rua A', '90', '49010111');
+INSERT INTO address (id, street_name, house_number, zip_code) VALUES ('8ddaf208-24c4-4e86-ad48-f40748ee1685', 'Rua B', '56', '49010585');
